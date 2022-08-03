@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+{% block title %}<title>Welcome To Your page User:D )</title>{% endblock %}
+{% block page_title %}
+    {{ super() }}<h1 class="second_title"> Users page</h1>
+{% endblock %}
+
+{% block tohen %}
+    <div class="hobbies_container">
+        {% if message %}
+            <h1>{{ message }}</h1>
+        {% endif %}
+        <h1>Insertion Form</h1>
+        <form action="/assignment4" method="POST">
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="text" name="user_name" placeholder="User name" required>
+            <input type="number" name="age" placeholder="Age" max="99" min="1" required>
+            <input type="hidden" name="method" value="INSERT">
+            <input type="submit" value="Insert">
+        </form>
+
+        <h1>Update Form</h1>
+        <form action="/assignment4" method="POST">
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="number" name="age" placeholder="Age" required>
+            <input type="hidden" name="method" value="UPDATE">
+            <input type="submit" value="Update">
+        </form>
+
+        <h1>Deletion Form</h1>
+        <form action="/assignment4" method="POST">
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="hidden" name="method" value="DELETE">
+            <input type="submit" value="Delete">
+        </form>
+
+        {% if users %}
+            <h1>Users List</h1>
+            {% for v in users%}
+                <li>Name:{{ v['name'] }} &nbsp Email:{{ v['email'] }} &nbsp User Name:{{ v['user_name'] }} &nbsp Age:{{ v['age'] }} </li>
+            {% endfor %}
+
+        {% elif no_user_message %}
+            {{ no_user_message }}
+
+        {% elif name %}
+            <h1>Name:{{ name }} &nbsp Email:{{ email }} &nbsp User Name:{{ user_name }}</h1>
+        {% endif %}
+    </div>
+
+
+{% endblock %}

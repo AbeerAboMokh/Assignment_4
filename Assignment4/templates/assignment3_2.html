@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+{% block title %}<title>Welcome To Your page User:D )</title>{% endblock %}
+{% block page_title %}
+    {{ super() }}<h1 class="second_title"> Users page</h1>
+{% endblock %}
+
+{% block tohen %}
+    <div class="hobbies_container">
+        <form action="/assignment3_2" method="get">
+            <input type="text" name="name" placeholder="Name">
+            <input type="submit" value="search">
+        </form>
+        {% if users %}
+            <h1> Users List </h1>
+            {% for k, v in users.items() %}
+                <li>Name:{{ v['name'] }} &nbsp Email:{{ v['email'] }} &nbsp User Name:{{ v['user_name'] }} </li>
+            {% endfor %}
+
+        {% elif no_user_message %}
+            {{ no_user_message }}
+
+        {% elif name %}
+            <h1>Name:{{ name }} &nbsp Email:{{ email }} &nbsp User Name:{{ user_name }}</h1>
+        {% endif %}
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+        &nbsp
+
+
+        {% if  not session['user_name'] %}
+
+
+            {% if message %}
+                <h1 class="register_message">{{ message }}</h1>
+            {% endif %}
+            <div class="register_form">
+                <h1 class="register_form">Register Form</h1>
+                <form action="/assignment3_2" method="post">
+                    <input type="text" name="user_name" placeholder=" username" autocomplete="on" required>
+                    <input type="password" name="password" placeholder="********" required>
+                    <input type="email" name="email" placeholder="gmail@gmail.com">
+                    <input type="text" name="name" placeholder=" Name">
+                    <input type="submit" value="register">
+                </form>
+            </div>
+
+        {% endif %}
+    </div>
+
+
+{% endblock %}

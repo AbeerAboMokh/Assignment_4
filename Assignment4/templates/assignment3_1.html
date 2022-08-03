@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Hobbies Page</title>
+{% endblock %}
+{% block page_title %}
+{{ super() }}<h1 class="second_title">Welcome to Hobbies page :)</h1>
+{% endblock %}
+{% block tohen %}
+    <div class="hobbies_container">
+        {% block header %}
+            <h1>My hobbies :</h1>
+        {% endblock %}
+        {% if hobbies_dic %}
+            <ol>
+                {% for mwhbi in hobbies_dic |sort %}
+                    <li><h2 class="hobbies_name">Hobie: {{ mwhbi }}.</h2></li>
+                {% endfor %}
+            </ol>
+
+        {% else %}
+            <h2 class="no_hobbies_massage">{{ no_hobbies_message |upper }}</h2>
+        {% endif %}
+    </div>
+{%endblock%}

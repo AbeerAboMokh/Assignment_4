@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static',filename='Css/Styles.css') }}">
+        <script defer="" src="{{ url_for('static',filename='js/function.js') }}"></script>
+
+
+
+</head>
+
+
+    {% include('styles.html') %}
+    {% include('functional.html') %}
+<body>
+
+    <div class="conhad">
+
+
+        <div class="num1">Home-page</div>
+
+        <div class="num2">
+           <nav>
+            <ul class="nav">
+                <li><a href="{{ url_for('display_home_page') }}">Home Page</a></li>
+                |
+                <li><a href="{{ url_for('display_contact_us') }}">Conact Us</a></li>
+                |
+                <li><a  href="{{ url_for('display_hobbies_page') }}" >Hobbies</a></li>
+                |
+                <li><a href="{{ url_for('display_users_page') }}">Users</a></li>
+                <li><a href="{{ url_for('display_assignment4') }}">Assignment 4 Part A</a></li>
+            </ul>
+        </nav>
+        </div>
+
+
+        <div class="num3">
+            <button id="button" onclick="typeWriter() ">Click here Please :)</button>
+        </div>>
+
+    </div>
+
+
+    <div class="home-page-container">
+
+        <header>
+             <img src="{{url_for('static',filename='img/logo.jpg')}}" >
+            <a class="cta" href="{{ url_for('display_contact_us') }}" target="_blank">
+                <button>Contact</button></a>
+            <p id="demo"></p>
+        </header>
+
+        <h1 class="title">Online Puzzle Shop</h1>
+
+        <div class="home-page__img">
+            <img  src="{{ url_for('static',filename='img/puzzle.jpg') }}" height="400" width="600">
+        </div>
+        
+        <p>
+        <p class=" Sale"><b>Sale!Sale!Sale!</b> 50% discount.</p>
+
+    </div>
+</body>
+</div>
+
+</html>

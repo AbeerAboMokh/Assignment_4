@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{% block title %}<title>Welcome To Your page User:D )</title>{% endblock %}
+{% block page_title %}
+    {{ super() }}<h1 class="second_title"> API page</h1>
+{% endblock %}
+
+{% block tohen %}
+    <div class="hobbies_container">
+        {% if message %}
+            <h1>{{ message }}</h1>
+        {% endif %}
+        <h1>Frontend Form</h1>
+        <form onsubmit="getUserDataFromAPI(event)">
+            <input type="text" id="userId" name="id" placeholder="ID" required>
+            <input type="submit" value="Search">
+        </form>
+
+        <h1>Backend Form</h1>
+        <form action="/assignment4/outer_source" method="POST">
+            <input type="text" name="ID" placeholder="ID" required>
+            <input type="submit" value="Search">
+        </form>
+
+        {% if name %}
+            <h3>Name: {{ name }} &nbsp Email: {{ email }}</h3>
+        {% endif %}
+        <h3 id="userName"></h1>
+    </div>
+
+
+{% endblock %}

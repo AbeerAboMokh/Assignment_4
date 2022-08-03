@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Connection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+    {% include('styles.html') %}
+    {% include('functional.html') %}
+
+<body class="connect">
+
+    <div class="conhad">
+
+    
+        <div class="num1">Connection</div>
+    
+        <div class="num2">
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('display_home_page') }}">Home Page</a></li>
+                    <li><a  href="{{ url_for('display_contact_us') }}">Connection</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    
+    <div class="num3">
+        <button id="button" onclick="typeWriter() " >Click here Please :)</button>
+    </div>>
+        
+    </div>
+
+    <a class="homecircle" href="{{ url_for('display_home_page') }}" ><button>Home</button></a>
+    <h1><b>Welcome!</b></h1>
+    <form>
+        <div class="block">
+            <p>
+                <label>FisrtName :</label>
+                <input type="text" required aria-placeholder="Username">
+                <label>LastName :</label>
+                <input type="text">
+            </p>
+            <br>
+            <p>
+                <label>Password :</label>
+                <input type="password" required placeholder="Write a complex password">
+            </p>
+            <br>
+            <p>
+                <label>E-Mail:</label>
+                <input type="email" placeholder="Write a valid email" value="myemail@gmail.com">
+            </p>
+            <br>
+            <hr>
+            <p>
+                <Label>What is Your Best Color :</Label>
+                <input type="color" name="color" >
+                
+            </p>
+
+            <br>
+            <hr>
+            <!--new element-->
+            <div class="Choose">
+                <p><label>Choose Number Of Pieces :</label></p>
+                <p> <input id="Min" type="checkbox" value="250">
+                    <label for="Min">250</label><br>
+                    <input id="Av" type="checkbox" value="500" checked>
+                    <label for="Av">500</label><br>
+                    <input id="Max" type="checkbox" value="1000">
+                    <label for="Max">1000&more</label>
+                </p>
+            </div>
+        </div>
+        <input type="submit" value="Save">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+
+</html>

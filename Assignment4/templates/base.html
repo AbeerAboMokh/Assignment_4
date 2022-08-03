@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}<title>page title</title>{% endblock %}
+    {% include('header.html') %}
+    {% block page_title %}
+    {% if session['loged_in' ]%}
+    <h2 class="register_message">Hello &nbsp {{ session['user_name'] }}!</h2>
+    {% else %}
+    <h1 class="all_pages_main_title">Hi,Welcome to PuzzleShop :)</h1>
+    {% endif %}
+    {% endblock %}
+
+    {% include('styles.html') %}
+    {% include('functional.html') %}
+
+</head>
+<body>
+
+{% block tohen %}
+<h1>Message from BASE Page!</h1>
+{% endblock %}
+
+
+</body>
+
+{% include('footer.html') %}
+</html>

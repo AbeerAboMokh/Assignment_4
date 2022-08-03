@@ -1,0 +1,278 @@
+
+* {
+    box-sizing: border-box;
+
+  }  
+
+li,a,button{
+    font-family: "Montserrat" , sans-serif;
+    font-weight: 500px;
+    font-size: 16px;
+    text-decoration: none;
+}  
+
+
+
+
+.header.logo{
+    cursor: pointer;
+    position:relative;  /* קם את תיבת האלמנט תוך הסטתה למרחק מוגדר מגבולות התיבה הממוקמת שמכילה אותה.*/
+    margin-left: 10% ; /* מקם את הלוגו שמולה ככל שאפשר */
+}
+
+.nav__links li a {
+    transition: all 0.3s case 0s;
+}
+
+.nav__links li a:hover {
+   color : #008890
+}
+
+button{
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s case 0s;
+}
+
+button:hover{
+    background-color: rgba(0,136,169,0.8);
+}
+
+
+.Sale {
+    color: red;
+    font-size: 30px;
+    visibility: visible;
+    text-align: center;
+
+}
+
+body {
+    background-image: url("../static/white\ background.jpg");
+    background-size: cover;
+    display: flow;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-size: 5vw;
+
+}
+
+.qt {
+    background-color: #D1FAFF;
+    font-size: 30px;
+    padding: 10px;
+    font-style: italic;
+    /* סוג הכתיבה */
+    border-width: 2px;
+    margin-left: 10%;
+    margin-right: 15%;
+    /* צדדים */
+    border-color: yellow black;
+    border-style: dashed;
+    animation-name: ChangeColor;
+    animation-duration: 5 s;
+    animation-iteration-count: 3;
+
+}
+
+.One {
+    padding: 25px;
+    color: black;
+    border-bottom: black;
+    margin: 10px;
+
+}
+
+/* min than this width will disappear the img  */
+@media (max-width: 1000px) {
+    .home-page__img {
+        display: none;
+    }
+
+    .Choose {
+        color: red;
+    }
+
+    .title {
+        padding: 20px;
+        background-color: brown;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .One {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+}
+
+.home-page__img {
+    height :452px ; 
+    width : 600px ; 
+    padding-left: 25%;
+
+    animation-name: Enter-img;
+    animation-duration: 5 s;
+    animation-iteration-count: 2;
+
+}
+
+
+/* ANIMATION  like function*/
+
+@keyframes Enter-img {
+    from {width :0px ; }
+    to {width : 600 px}
+}
+
+Home-page.head{
+    float: left 
+}
+    
+.home-page-container{
+    width: 2000px;
+    margin: auto; the container in the middle
+
+}
+
+
+.connect{
+    background-image: url("children\ puzzle.webp");
+    background-position: bottom left ;
+}
+
+.block{
+   background-color: #D1FAFF ;
+}
+
+
+.nvbar .links {
+    float: left;
+    text-align: top;
+    
+    color: black;
+    width: 30%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nvbar.links li {
+    display: inline-block;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+
+.button{
+    position: absolute;
+}
+
+li{
+    display: inline;
+    background-color: bisque;
+}
+
+.active{
+    color: red;
+}
+
+
+/* ---------------------------- */
+
+.conhad{
+background-color: #D1FAFF;
+height: 200px;
+display: grid;
+grid-template-areas: 
+'Header Header1 Header2';
+text-align: center;
+}
+
+.num1{
+    text-align: center;
+    grid-area: Header; 
+    font-size: 30px;
+}
+.num2{
+
+    grid-area: Header1; 
+    text-align: center;
+}
+.num3{
+
+    grid-area: Header2; 
+    text-align: center; 
+}   
+
+
+@media only screen and (max-width: 600px) {
+
+    body {background-color: rgb(158, 92, 105);}
+
+    .conhad {
+        display: grid;
+        grid-template-areas: 'Header'
+        'header1'
+        'header2';
+
+        background-color: rgb(158, 92, 105)
+
+    }
+    }
+
+/* --------Assignment3_1-------------------- */
+
+.second_title{
+    font-size: 30px;
+    text-align: center;
+    color: blue ;
+
+
+}
+
+h1.register_form{
+    font-size: 20px;
+    text-align: center;
+   color: red;
+}
+
+.register_message{
+
+    font-size: 30px;
+    text-align: center;
+   color: red;
+
+}
+
+.hobbies_name{
+    font-size: 30px;
+    color: black;
+
+}
+
+.hobbies_container{
+
+     display: flex;
+    flex-direction: column;
+     align-items: center;
+
+}
+
+.no_hobbies_massage{
+   color: red;
+    font-size: x-large;
+}
+
